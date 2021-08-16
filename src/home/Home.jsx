@@ -1,34 +1,63 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import useFetch from '../useFetch'
 
 import { Container } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import Header from '../components/Header'
+import Definition from '../components/Definition'
+
 
 const useStyles = makeStyles({
     container: {
         display: 'flex',
         flexDirection: 'column',
         height: '100vh',
-        justifyContent: 'center'
+        justifyContent: 'space-evenly'
     }
 })
+
+
+
+
 
 const Home = () => {
     const [word, setWord] =useState('')
     const [category, setCategory] =useState('en')
 
+     const [data, setData] =useState([])
+    const [pending, setPending] = useState(true)
+    const [error, setError] =useState(false)
+
     const classes = useStyles()
+    
 
 
-  const {data, pending, error} = useFetch('https://api.dictionaryapi.dev/api/v2/entries/en/hello')  
+  useEffect(() => {
+        fetch(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`)
+            .then(res => {
+            if(!res.ok) {
+            throw Error('problem with fetch')
+            } else {
+            return res.json()
+         }
+  })
+        .then(data => {
+            setData(data)
+            setPending(false)
+        })
+        .catch(err => {
+            setError(err.message)
+            setPending(false)
+        })
+  }, [word, category])
 
     return (
         <Container maxWidth='md' className={classes.container} >
-            {pending && <div>loading... </div>}
-            {error && <div> {error} </div>}
+
+
                 <Header word={word} setWord={setWord} category={category} setCategory={setCategory} />
+                { data && <Definition word={word} data={data} category={category} /> }
         </Container>
     )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './Header.module.scss'
 import { createTheme } from '@material-ui/core'
 
-const Header = ({category, setCategory}) => {
+const Header = ({category, setCategory, word, setWord}) => {
 
     const darkTheme = createTheme({
     palette: {
@@ -33,18 +33,30 @@ const Header = ({category, setCategory}) => {
         }
     ]
 
+    const handleChange = (e) => {
+        setCategory(e)
+        setWord('')
+    }
+
     return (
         <div className={styles.header}>
-            <span className={styles.title}>Word Hunt</span>
+            <span className={styles.title}>{word ? word: 'Word Hunt'}</span>
             <div className={styles.input}>
                 <ThemeProvider theme={darkTheme}>
-                    <TextField  variant='outlined' label='outlined' />
+                    <TextField  
+                    className={styles.search}
+                    variant='outlined' 
+                    label='Search a word' 
+                        value={word}
+                        onChange={(e) => setWord(e.target.value)}
+                    />
                     <TextField
+                    className={styles.select}
                         select
-                        label=" Search a word"
+                        label="Language"
                         helperText="Please select your Language"
                             value={category}
-                            onChange={(e) => {setCategory(e.target.value)}}
+                            onChange={(e) => {handleChange(e.target.value)}}
                         >
                         {languages.map((option) => (
                             <MenuItem key={option.label} value={option.label}>

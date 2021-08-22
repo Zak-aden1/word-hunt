@@ -3,13 +3,13 @@ import React from 'react'
 import styles from './Header.module.scss'
 import { createTheme } from '@material-ui/core'
 
-const Header = ({category, setCategory, word, setWord}) => {
+const Header = ({category, setCategory, word, setWord, light}) => {
 
     const darkTheme = createTheme({
     palette: {
-        type: 'dark',
+        type:light? 'light': 'dark',
         primary:  {
-            main: '#fff'
+            main:light ?'#000': '#fff'
         }
     },
     });

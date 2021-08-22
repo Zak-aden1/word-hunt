@@ -17,11 +17,24 @@ import { Switch } from '@material-ui/core';
         hr: {
             backgroundColor: 'black',
              width: '100%'
-        }
+        },
+        lightAudio: {
+            backgroundColor: '#000',
+            borderRadius: 10
+        },
+        Lightword: {
+            backgroundColor: 'black',
+            color: 'black'
+        },
+        lightHr: {
+            backgroundColor: 'white',
+            color: 'white',
+             width: '100%'
+        },
     })
 
 
-const Definition = ({word, category, data}) => {
+const Definition = ({word, category, data, light}) => {
     const classes = useStyles()
     return (
         <div className={styles.definition}>
@@ -39,7 +52,7 @@ const Definition = ({word, category, data}) => {
                         item.definitions.map((def) => (
                             <div className={styles.singleMeaning}>
                                 <b>{def.definition}</b>
-                                <hr className={classes.hr} />
+                                <hr className={light? classes.lightHr: classes.hr} />
                                 {def.example&& (
                                     <span>
                                     <b>Example: </b> 

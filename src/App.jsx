@@ -41,12 +41,12 @@ const App = () => {
   
 
   return (
-    <div className={light ? classes.light :classes.root} styles={{transition: 'a'}} >
+    <div className={light ? classes.light :classes.root} style={{transition: 'all 0.5s linear'}} >
       <div style={{position: 'absolute', top: 0, right: 15, paddingTop: 10}}>
                 <span>{light ?'dark mode': 'light mode' }</span>
                 <DarkMode checked={light} onChange={() =>setLight(!light)} />
             </div>
-      <Home />
+      <Home light={light} />
     </div>
   );
 }

@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 
 
-const Home = () => {
+const Home = ({light}) => {
     const [word, setWord] =useState('')
     const [category, setCategory] =useState('en')
 
@@ -54,10 +54,8 @@ const Home = () => {
 
     return (
         <Container maxWidth='md' className={classes.container} >
-
-
-                <Header word={word} setWord={setWord} category={category} setCategory={setCategory} />
-                { data && <Definition word={word} data={data} category={category} /> }
+        <Header light={light} word={word} setWord={setWord} category={category} setCategory={setCategory} />
+                { data && <Definition light={light} word={word} data={data} category={category} /> }
         </Container>
     )
 }

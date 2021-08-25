@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Zak-aden1/word-hunt/static/css/main.95ec25bf.chunk.css",
-    "main.js": "/Zak-aden1/word-hunt/static/js/main.b98bfe6d.chunk.js",
-    "main.js.map": "/Zak-aden1/word-hunt/static/js/main.b98bfe6d.chunk.js.map",
-    "runtime-main.js": "/Zak-aden1/word-hunt/static/js/runtime-main.9aef876b.js",
-    "runtime-main.js.map": "/Zak-aden1/word-hunt/static/js/runtime-main.9aef876b.js.map",
-    "static/js/2.4abd6db1.chunk.js": "/Zak-aden1/word-hunt/static/js/2.4abd6db1.chunk.js",
-    "static/js/2.4abd6db1.chunk.js.map": "/Zak-aden1/word-hunt/static/js/2.4abd6db1.chunk.js.map",
-    "index.html": "/Zak-aden1/word-hunt/index.html",
-    "static/css/main.95ec25bf.chunk.css.map": "/Zak-aden1/word-hunt/static/css/main.95ec25bf.chunk.css.map",
-    "static/js/2.4abd6db1.chunk.js.LICENSE.txt": "/Zak-aden1/word-hunt/static/js/2.4abd6db1.chunk.js.LICENSE.txt"
+    "main.css": "/word-hunt/static/css/main.95ec25bf.chunk.css",
+    "main.js": "/word-hunt/static/js/main.b98bfe6d.chunk.js",
+    "main.js.map": "/word-hunt/static/js/main.b98bfe6d.chunk.js.map",
+    "runtime-main.js": "/word-hunt/static/js/runtime-main.1414989a.js",
+    "runtime-main.js.map": "/word-hunt/static/js/runtime-main.1414989a.js.map",
+    "static/js/2.4abd6db1.chunk.js": "/word-hunt/static/js/2.4abd6db1.chunk.js",
+    "static/js/2.4abd6db1.chunk.js.map": "/word-hunt/static/js/2.4abd6db1.chunk.js.map",
+    "index.html": "/word-hunt/index.html",
+    "static/css/main.95ec25bf.chunk.css.map": "/word-hunt/static/css/main.95ec25bf.chunk.css.map",
+    "static/js/2.4abd6db1.chunk.js.LICENSE.txt": "/word-hunt/static/js/2.4abd6db1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9aef876b.js",
+    "static/js/runtime-main.1414989a.js",
     "static/js/2.4abd6db1.chunk.js",
     "static/css/main.95ec25bf.chunk.css",
     "static/js/main.b98bfe6d.chunk.js"
